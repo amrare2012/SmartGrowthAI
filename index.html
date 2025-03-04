@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SmartGrowth AI - AI-Driven Training for SMEs</title>
   
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   
   <style>
@@ -29,31 +29,64 @@
     nav {
       background: #333;
       padding: 10px;
-      text-align: center;
     }
-    nav a {
-      color: white;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav ul li {
+      position: relative;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      color: #fff;
       text-decoration: none;
-      margin: 15px;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
+      font-weight: 600;
+      border-radius: 4px;
     }
-    nav a:hover {
+    nav ul li a:hover {
       background: #26D0CE;
       transition: 0.3s;
     }
+    /* Dropdown Menu */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background: #333;
+      min-width: 160px;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+    nav ul li:hover > ul {
+      display: block;
+    }
+    nav ul li ul li {
+      width: 100%;
+    }
+    nav ul li ul li a {
+      padding: 10px;
+      font-size: 16px;
+    }
+    /* Section Styles */
     section {
       max-width: 1000px;
       margin: 30px auto;
       padding: 25px;
-      background: white;
+      background: #fff;
       box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
       border-radius: 8px;
     }
     h2 {
       color: #1A2980;
+      margin-top: 0;
     }
     h3 {
       color: #003d99;
@@ -62,6 +95,7 @@
       border: 1px solid #ddd;
       margin: 25px 0;
     }
+    /* Table Styles */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -76,6 +110,7 @@
       background: #1A2980;
       color: #fff;
     }
+    /* CTA Button */
     .cta {
       text-align: center;
       margin-top: 20px;
@@ -92,6 +127,7 @@
     .cta button:hover {
       background: #0f1b4d;
     }
+    /* Footer Styles */
     footer {
       background: #1A2980;
       color: white;
@@ -102,6 +138,7 @@
     /* Pricing Section */
     .pricing {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       text-align: center;
     }
@@ -110,17 +147,28 @@
       padding: 20px;
       border-radius: 8px;
       width: 30%;
+      min-width: 280px;
+      margin: 10px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     }
     .pricing-box h3 {
       background: #1A2980;
       color: white;
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 4px;
+      margin-top: 0;
     }
     .pricing-box p {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
+      margin: 15px 0;
+    }
+    .pricing-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .pricing-box ul li {
+      margin: 8px 0;
     }
   </style>
 </head>
@@ -131,10 +179,40 @@
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#solution">Our Solution</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#contact">Contact</a>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li>
+      <a href="#problem">The Problem</a>
+      <ul>
+        <li><a href="#training-costs">Training Costs</a></li>
+        <li><a href="#educational-gaps">Educational Gaps</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#solution">Our Solution</a>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#assessments">AI Assessments</a></li>
+        <li><a href="#flexible">Flexible Training</a></li>
+        <li><a href="#incentives">Incentives</a></li>
+        <li><a href="#accountability">Accountability</a></li>
+        <li><a href="#reports">Performance Reports</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#features">Features</a>
+    </li>
+    <li>
+      <a href="#implementation">Implementation</a>
+      <ul>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#timeframe">Timeframe</a></li>
+      </ul>
+    </li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#results">Results & Impact</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <section id="home">
@@ -147,9 +225,117 @@
 
 <hr>
 
+<section id="problem">
+  <h2>The Problem</h2>
+  <p>SMEs often face high training costs that lead to under-skilled employees and poor management practices. Additionally, many SME owners lack formal education, limiting their ability to implement innovative strategies.</p>
+  <section id="training-costs">
+    <h3>High Training Costs</h3>
+    <p>Due to budget constraints, SMEs often avoid investing in employee training, resulting in low skill levels and inefficient management.</p>
+  </section>
+  <section id="educational-gaps">
+    <h3>Educational Gaps Among SME Owners</h3>
+    <p>Only 40% of Latino SME owners in the U.S. have a bachelor's degree, which hampers strategic decision-making and innovation.</p>
+  </section>
+</section>
+
+<hr>
+
 <section id="solution">
   <h2>Our Solution</h2>
-  <p>SmartGrowth AI provides a fully automated, cost-effective training platform that uses AI-driven assessments, customized learning paths, and structured incentives to enhance employee skills and workforce efficiency.</p>
+  <p>SmartGrowth AI offers a fully automated, cost-effective training platform that leverages AI to assess skills, generate personalized learning paths, and drive continuous employee development.</p>
+  <section id="overview">
+    <h3>Solution Overview</h3>
+    <p>Our platform delivers customized training modules and flexible, self-paced courses, tailored to the needs of various industries.</p>
+  </section>
+  <section id="assessments">
+    <h3>AI Skill Assessments</h3>
+    <p>Employees undergo an initial AI-based evaluation to identify skill gaps, enabling the system to craft targeted training plans.</p>
+  </section>
+  <section id="flexible">
+    <h3>Flexible, Online Training</h3>
+    <p>The training is delivered entirely online, allowing employees to learn at their own pace without the need for physical training spaces.</p>
+  </section>
+  <section id="incentives">
+    <h3>Incentives & Rewards</h3>
+    <p>Participants earn official certificates, bonuses, and leadership opportunities while receiving public recognition for their achievements.</p>
+  </section>
+  <section id="accountability">
+    <h3>Accountability Measures</h3>
+    <p>Our system mandates a minimum of two training sessions per week, with automated reminders and a gradual penalization process to ensure consistent participation.</p>
+  </section>
+  <section id="reports">
+    <h3>Performance Reports</h3>
+    <p>Managers receive real-time, AI-generated reports detailing employee progress and areas for improvement, enabling data-driven decisions.</p>
+  </section>
+</section>
+
+<hr>
+
+<section id="features">
+  <h2>Features</h2>
+  <ul>
+    <li>Customizable online training modules integrated with leading platforms.</li>
+    <li>Personalized learning paths based on AI-driven assessments.</li>
+    <li>Self-paced, 100% online training for reduced costs.</li>
+    <li>Structured incentive system with rewards and accountability measures.</li>
+    <li>Real-time performance reports for effective workforce management.</li>
+  </ul>
+</section>
+
+<hr>
+
+<section id="implementation">
+  <h2>Implementation Plan & Timeframe</h2>
+  <p>Our deployment plan is designed to integrate seamlessly into your business with flexible options tailored to your needs.</p>
+  <section id="roadmap">
+    <h3>Roadmap</h3>
+    <table>
+      <tr>
+        <th>Phase</th>
+        <th>Standard Program (3-6 months)</th>
+        <th>Accelerated Program (2-4 months)</th>
+        <th>Custom Enterprise (6+ months)</th>
+      </tr>
+      <tr>
+        <td>Planning & Setup</td>
+        <td>1 month</td>
+        <td>2 weeks</td>
+        <td>1-2 months</td>
+      </tr>
+      <tr>
+        <td>AI Skill Assessment</td>
+        <td>1 month</td>
+        <td>2 weeks</td>
+        <td>1 month</td>
+      </tr>
+      <tr>
+        <td>Course Deployment</td>
+        <td>3 months</td>
+        <td>1-2 months</td>
+        <td>3+ months</td>
+      </tr>
+      <tr>
+        <td>Evaluation & Adjustments</td>
+        <td>6 months</td>
+        <td>4 months</td>
+        <td>Ongoing</td>
+      </tr>
+      <tr>
+        <td>Full Automation & Expansion</td>
+        <td>6+ months</td>
+        <td>4+ months</td>
+        <td>Fully Customized</td>
+      </tr>
+    </table>
+  </section>
+  <section id="timeframe">
+    <h3>Implementation Timeframe</h3>
+    <p>
+      <strong>Standard Training Program:</strong> 3 to 6 months<br>
+      <strong>Accelerated Training Program:</strong> 2 to 4 months<br>
+      <strong>Custom Enterprise Training Program:</strong> 6+ months with tailored AI solutions
+    </p>
+  </section>
 </section>
 
 <hr>
@@ -159,16 +345,16 @@
   <div class="pricing">
     <div class="pricing-box">
       <h3>Basic Plan</h3>
-      <p>$99/month</p>
+      <p>$149/month</p>
       <ul>
         <li>✔ AI Skill Assessment</li>
         <li>✔ 5 Training Modules</li>
-        <li>✔ Progress Tracking</li>
+        <li>✔ Basic Progress Tracking</li>
       </ul>
     </div>
     <div class="pricing-box">
       <h3>Professional Plan</h3>
-      <p>$199/month</p>
+      <p>$299/month</p>
       <ul>
         <li>✔ Everything in Basic</li>
         <li>✔ 10 Training Modules</li>
@@ -178,7 +364,7 @@
     </div>
     <div class="pricing-box">
       <h3>Enterprise Plan</h3>
-      <p>$499/month</p>
+      <p>$699/month</p>
       <ul>
         <li>✔ Everything in Professional</li>
         <li>✔ Unlimited Training Modules</li>
@@ -191,9 +377,16 @@
 
 <hr>
 
+<section id="results">
+  <h2>Results & Impact</h2>
+  <p>Companies using SmartGrowth AI report significant improvements in workforce efficiency, employee satisfaction, and overall business strategy. Our solution helps SMEs achieve better management practices and increased productivity.</p>
+</section>
+
+<hr>
+
 <section id="contact">
   <h2>Contact & Support</h2>
-  <p>Have questions? Want to integrate SmartGrowth AI into your business?</p>
+  <p>If you have questions or wish to integrate SmartGrowth AI into your business, please reach out to us.</p>
   <p>Email: support@smartgrowthai.com</p>
 </section>
 
